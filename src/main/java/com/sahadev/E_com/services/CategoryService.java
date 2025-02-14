@@ -1,6 +1,6 @@
 package com.sahadev.E_com.services;
 
-import com.sahadev.E_com.DTO.CategoryDto;
+import com.sahadev.E_com.dto.CategoryDto;
 import com.sahadev.E_com.entities.Category;
 import com.sahadev.E_com.repos.CategoryRepo;
 import org.modelmapper.ModelMapper;

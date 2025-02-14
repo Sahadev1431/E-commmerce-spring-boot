@@ -1,7 +1,5 @@
 package com.sahadev.E_com.controllers;
-import com.sahadev.E_com.DTO.UserDto;
-import com.sahadev.E_com.entities.User;
-import com.sahadev.E_com.repos.UserRepo;
+import com.sahadev.E_com.dto.UserDto;
 import com.sahadev.E_com.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,4 +17,5 @@ public class UserController {
     public ResponseEntity<UserDto> addUser(@RequestBody UserDto userDto) {
         return ResponseEntity.ok(userService.addUser(userDto));
     }
+
 }

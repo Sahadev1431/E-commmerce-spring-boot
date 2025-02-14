@@ -9,6 +9,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 
 @Entity
@@ -30,6 +31,9 @@ public class Product {
     @JoinColumn (name = "category_id")
     @JsonIgnore
     private Category category;
+
+    @OneToMany (mappedBy = "product",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<ProductImage> productImages;
 
 
     @CreationTimestamp

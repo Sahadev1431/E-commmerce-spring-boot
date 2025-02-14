@@ -1,11 +1,7 @@
-package com.sahadev.E_com.DTO;
+package com.sahadev.E_com.dto;
 
 import com.sahadev.E_com.entities.Role;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.PrePersist;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

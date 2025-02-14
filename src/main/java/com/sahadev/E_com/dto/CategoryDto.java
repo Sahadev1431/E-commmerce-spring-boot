@@ -1,11 +1,8 @@
-package com.sahadev.E_com.DTO;
+package com.sahadev.E_com.dto;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Getter
 @Setter

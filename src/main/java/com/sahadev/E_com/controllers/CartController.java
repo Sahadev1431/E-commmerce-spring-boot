@@ -1,7 +1,6 @@
 package com.sahadev.E_com.controllers;
 
-import com.sahadev.E_com.DTO.CartDto;
-import com.sahadev.E_com.entities.Cart;
+import com.sahadev.E_com.dto.CartDto;
 import com.sahadev.E_com.services.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

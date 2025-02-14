@@ -1,8 +1,7 @@
 package com.sahadev.E_com.controllers;
 
-import com.sahadev.E_com.DTO.CategoryDto;
+import com.sahadev.E_com.dto.CategoryDto;
 import com.sahadev.E_com.entities.Category;
-import com.sahadev.E_com.repos.CategoryRepo;
 import com.sahadev.E_com.services.CategoryService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

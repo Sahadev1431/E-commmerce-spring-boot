@@ -1,8 +1,5 @@
-package com.sahadev.E_com.DTO;
+package com.sahadev.E_com.dto;
 
-import com.sahadev.E_com.entities.CartItem;
-import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 

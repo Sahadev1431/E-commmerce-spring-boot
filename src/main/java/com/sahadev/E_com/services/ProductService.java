@@ -1,18 +1,15 @@
 package com.sahadev.E_com.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sahadev.E_com.DTO.ProductDto;
+import com.sahadev.E_com.dto.ProductDto;
 import com.sahadev.E_com.entities.Category;
 import com.sahadev.E_com.entities.Product;
 import com.sahadev.E_com.repos.ProductRepo;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
