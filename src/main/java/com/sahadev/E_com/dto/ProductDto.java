@@ -6,6 +6,8 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 
 @Getter @Setter
 public class ProductDto {
@@ -27,4 +29,5 @@ public class ProductDto {
     @NotNull (message = "Category id should not be null")
     private Long categoryId;
 
+    private List<ProductImageDto> productImages;
 }

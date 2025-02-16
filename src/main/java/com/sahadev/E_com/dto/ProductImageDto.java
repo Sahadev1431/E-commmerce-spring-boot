@@ -11,4 +11,5 @@ public class ProductImageDto {
 
     private byte [] data;
 
+    private Long productId;
 }

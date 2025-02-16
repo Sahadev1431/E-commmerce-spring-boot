@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -32,7 +33,7 @@ public class ProductController {
     @Autowired private ProductImageRepo productImageRepo;
 
     @GetMapping ("/{id}")
-    public ResponseEntity<Product> getProductById(@PathVariable Long id) {
+    public ResponseEntity<ProductDto> getProductById(@PathVariable Long id) {
         return ResponseEntity.ok(productService.findById(id));
     }
 
@@ -41,17 +42,17 @@ public class ProductController {
         return ResponseEntity.ok(productService.getAllProducts());
     }
     @PostMapping
-    public ResponseEntity<Product> addProduct (@RequestBody @Valid ProductDto productDto) {
-        Long categoryId = productDto.getCategoryId();
-        Product savedProduct = productService.addProduct(productDto,categoryId);
-        return ResponseEntity.ok(savedProduct);
+    public ResponseEntity<ProductDto> addProduct (@RequestBody @Valid ProductDto productDto) {
+
+        return ResponseEntity.ok(productService.addProduct(productDto,productDto.getCategoryId()));
     }
 
     @PutMapping ("/{id}")
-    public ResponseEntity<Product> updateProductById (@PathVariable Long id,@RequestBody ProductDto productDto) {
+    public ResponseEntity<ProductDto> updateProductById (@PathVariable Long id,@RequestBody ProductDto productDto) {
         return ResponseEntity.ok(productService.updateProductById(id,productDto));
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @DeleteMapping ("/{id}")
     public ResponseEntity<String> deleteProductById(@PathVariable Long id) {
         productService.deleteProductById(id);
